@@ -8,6 +8,7 @@ export class Argon2Error extends Error {
   constructor(
     public readonly type: Argon2ErrorType,
     message: string,
+    // deno-lint-ignore no-explicit-any
     public readonly originalError?: any,
   ) {
     super(message);

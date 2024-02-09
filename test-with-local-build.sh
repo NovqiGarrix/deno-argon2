@@ -26,4 +26,4 @@ else
     sed -i '' "s/$PTN_BEFORE/$PTN_AFTER/g" lib/internal.ts
 fi
 
-deno test --allow-read --allow-write --allow-ffi --allow-run --allow-env --unstable tests/
+deno test --allow-read --allow-write --allow-ffi --allow-run --allow-env --unstable-ffi tests/

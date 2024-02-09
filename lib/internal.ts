@@ -39,7 +39,7 @@ const encoder = new TextEncoder();
 const decoder = new TextDecoder();
 
 function readAndFreeBuffer(ptr: Deno.PointerValue): Uint8Array {
-  const ptrView = new Deno.UnsafePointerView(ptr);
+  const ptrView = new Deno.UnsafePointerView(ptr!);
   const len = new DataView(ptrView.getArrayBuffer(4)).getUint32(0);
 
   const buf = new Uint8Array(len);
